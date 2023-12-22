@@ -10,7 +10,7 @@ const Navbar = () => {
       <header className="relative bg-white">
         <MaxWidthWrapper>
           <div className="border-b border-gray-200">
-            <div className="flex h-16 items-center">
+            <div className="flex h-16  items-center">
               <div className="ml-4 flex lg:ml-0">
                 <Link href="/">
                   <Icons.logo className="h-10 w-10" />
