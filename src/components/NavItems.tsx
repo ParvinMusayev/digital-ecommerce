@@ -7,25 +7,25 @@ import { useOnClickOutside } from "@/hooks/use-on-click-outside";
 
 const NavItems = () => {
   const [activeIndex, setActiveIndex] = useState<null | number>(null);
-  
+
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
-      if(e.key === "Escape"){
-        setActiveIndex(null)
+      if (e.key === "Escape") {
+        setActiveIndex(null);
       }
-    }
+    };
 
-    document.addEventListener("keydown",handler)
+    document.addEventListener("keydown", handler);
 
     return () => {
-      document.removeEventListener("keydown", handler)
-    }
-  },[])
-  
-  const isAnyOpen = activeIndex !== null;
-  const navRef = useRef<HTMLDivElement | null>(null)
+      document.removeEventListener("keydown", handler);
+    };
+  }, []);
 
-  useOnClickOutside(navRef, ()=> setActiveIndex(null))
+  const isAnyOpen = activeIndex !== null;
+  const navRef = useRef<HTMLDivElement | null>(null);
+
+  useOnClickOutside(navRef, () => setActiveIndex(null));
 
   return (
     <div className="flex gap-4 items-center h-full" ref={navRef}>
@@ -40,7 +40,6 @@ const NavItems = () => {
 
         const isOpen = i === activeIndex;
 
-       
         return (
           <div>
             <NavItem
