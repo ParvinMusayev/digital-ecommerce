@@ -25,7 +25,7 @@ const page = () => {
     resolver: zodResolver(AuthCredentialsValidator),
   });
 
-  const {data} = trpc.anyApiRoute.useQuery()
+  // const {data} = trpc.anyApiRoute.useQuery()
   
 
   const onSubmit = ({ email, password }: TAuthCredentialsValidator) => {
