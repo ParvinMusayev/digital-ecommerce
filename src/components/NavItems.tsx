@@ -40,6 +40,8 @@ const NavItems = () => {
 
         const isOpen = i === activeIndex;
 
+       
+
         return (
           <div>
             <NavItem
